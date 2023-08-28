@@ -1,0 +1,31 @@
+@import '../ui/mixin/typography.scss';
+@import '../ui/mixin/colors.scss';
+
+.infoWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+.ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 700px;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    background-color: darkgrey;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}

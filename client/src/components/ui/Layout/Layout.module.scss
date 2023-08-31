@@ -1,0 +1,20 @@
+@import '../mixin/colors.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100vh;
+    // background-color: var(--red1); 
+    background-color: deepskyblue; 
+  }
+  
+  .content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  

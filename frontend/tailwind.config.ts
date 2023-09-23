@@ -7,7 +7,7 @@ const config = {
 	content: ["./src/**/*.{ts,tsx}"],
 	plugins: [
 		require("tailwindcss-animate"),
-    require("./src/lib/shadcnPlugin").shadcnPlugin,
+		require("./src/lib/shadcnPlugin").shadcnPlugin,
 		typoghraphyPlugin,
 	],
 } satisfies Config

@@ -1,7 +1,8 @@
-import { ThemeToggle } from "./ThemeToggle"
-import { Button } from "./ui/Button"
 
-function NavOptions() {
+import { ThemeToggle } from "@/components/Header/ThemeToggle"
+import { Button } from "../../ui/Button"
+
+export const NavOptions = () => {
     return (
         <div >
             <Button variant="ghost" size="icon" className="cursor-pointer" asChild>
@@ -10,5 +11,3 @@ function NavOptions() {
         </div>
     )
 }
-
-export default NavOptions

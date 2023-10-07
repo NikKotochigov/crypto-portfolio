@@ -1,6 +1,6 @@
 
-import TabsBar from './TabsBar'
-import NavOptions from './NavOptions'
+import { NavOptions } from './NavOptions'
+import { TabsBar } from './TabsBar'
 
 export const Header = () => {
     return (

@@ -1,5 +1,7 @@
 import React from "react";
-import { Modal } from "./ui/Modal";
+import { Modal } from "../ui/Modal";
+import { genericComponentRender } from "@/lib/genericComponentRender";
+import { ModalAddAssetSelectCoin } from "./ModalAddAssetSelectCoin/ModalAddAssetSelectCoin";
 
 interface IModalAddAssetProps {
     isOpen: boolean;
@@ -16,6 +18,7 @@ export const ModalAddAsset: React.FC<IModalAddAssetProps> = (props) => {
             title='Add Asset'
             isOpen={isOpen}
             onClose={onClose}
+            content={genericComponentRender(ModalAddAssetSelectCoin, {})}
         />
     )
 }

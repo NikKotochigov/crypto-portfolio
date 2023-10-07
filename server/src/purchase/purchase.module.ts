@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { PurchaseService } from './purchase.service';
-import { PurchaseController } from './purchase.controller';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { PurchaseEntity } from './purchase.entity';
 
 @Module({
+  imports: [TypeOrmModule.forFeature([PurchaseEntity])], 
   providers: [PurchaseService],
-  controllers: [PurchaseController]
 })
 export class PurchaseModule {}

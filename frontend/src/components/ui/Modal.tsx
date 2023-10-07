@@ -58,7 +58,7 @@ export const Modal: React.FC<IModalProps> = (props) => {
                             </Dialog.Title>
                             }
                             <div className="mt-2">
-
+                                {content}
                             </div>
                         </div>
                     </Transition.Child>

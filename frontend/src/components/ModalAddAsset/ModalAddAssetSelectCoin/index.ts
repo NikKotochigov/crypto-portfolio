@@ -1,0 +1,1 @@
+export { ModalAddAssetSelectCoin } from './ModalAddAssetSelectCoin';

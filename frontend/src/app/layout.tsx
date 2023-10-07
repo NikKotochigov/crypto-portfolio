@@ -1,8 +1,9 @@
-import { Header } from '@/components/Header'
+
 import { Providers } from '@/components/Providers'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
+import { Header } from '@/components/Header'
 
 import '@/styles/globals.css'
 

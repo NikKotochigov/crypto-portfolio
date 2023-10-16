@@ -8,10 +8,10 @@ import { HttpService } from '@nestjs/axios';
 export class CryptocurrencyService {
     constructor(private http: HttpService) { }
 
-    async getCryptocurrencies(): Promise<Observable<Cryptocurrency[]>> {
+    async getCryptocurrencies(offset: number, limit: number): Promise<Observable<Cryptocurrency[]>> {
         const apiUrl = `${process.env.COINMARKETCAP_API_URL}/v1/cryptocurrency/listings/latest`;
         const headers = { 'X-CMC_PRO_API_KEY': process.env.COINMARKETCAP_API_KEY };
-        const params = { limit: 100 };
+        const params = { start: offset, limit };
 
         return this.http
             .get(apiUrl, { headers, params })

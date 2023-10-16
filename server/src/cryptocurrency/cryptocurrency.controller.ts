@@ -1,14 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
 import { CryptocurrencyService } from './cryptocurrency.servise';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Cryptocurrency } from './cryptocurrency.interface';
 
-@Controller('cryptocurrency')
+@Controller('cryptocurrencies')
 export class CryptocurrencyController {
     constructor(private readonly cryptocurrencyService: CryptocurrencyService) { }
 
-    @Get('map')
-    getCryptocurrencies(): Promise<Observable<Cryptocurrency[]>> {
-        return this.cryptocurrencyService.getCryptocurrencies();
+    @Get('list')
+    getCryptocurrencies(offset: number, limit: number): Promise<Observable<Cryptocurrency[]>> {
+        return this.cryptocurrencyService.getCryptocurrencies(offset, limit);
     }
 }

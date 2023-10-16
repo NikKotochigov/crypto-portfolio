@@ -1,0 +1,1 @@
+export { ModalAddAsset } from './ModalAddAsset';

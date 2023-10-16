@@ -1,11 +1,11 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { ApplicationModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-
-  // Применение настроек CORS
-  app.enableCors();
+  const appOptions = { cors: true };
+  const app = await NestFactory.create(ApplicationModule, appOptions);
+  app.setGlobalPrefix('api');
+  
   await app.listen(4000);
 }
 bootstrap();
